@@ -76,8 +76,9 @@ def convert_hdf5_to_npz(hdf5_path, npz_path):
                 recurse_t(demo_group["obs"])
                 obs_per_timestep.append(np.concatenate(timestep_obs))
 
-            print(f"Trajectory {demo_key}: obs {len(obs_per_timestep)}, actions {len(act[:-1])}")
-            observations.append(np.stack(obs_per_timestep))
+            stacked = np.stack(obs_per_timestep)
+            print(f"Trajectory {demo_key}: obs {stacked.shape}, actions {np.array(act[:-1]).shape}")
+            observations.append(stacked)
             actions.append(act[:-1])
 
             dones.append(np.array([False] * (timesteps - 2) + [True]))

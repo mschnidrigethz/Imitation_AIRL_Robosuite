@@ -1,5 +1,8 @@
 import h5py
 import numpy as np
+import os
+import time
+import torch
 
 import robosuite as suite
 from robosuite.wrappers.gym_wrapper import GymWrapper
@@ -55,16 +58,6 @@ def make_franka_env():
         use_object_obs=True,
         control_freq=20,
     )
-    env.obs_keys = [
-        "robot0_joint_pos",       # joint_pos
-        "robot0_joint_vel",       # joint_vel
-        "robot0_eef_pos",         # eef_pos
-        "robot0_eef_quat",        # eef_quat
-        "robot0_gripper_qpos",    # gripper_pos
-        "cube_pos",               # cube_positions
-        "cube_quat",              # cube_orientations
-        "object-state"            # object
-    ]
     return GymWrapper(env)
 
 
@@ -76,7 +69,7 @@ venv = DummyVecEnv([make_franka_env for _ in range(4)])
 # 3. Expert Trajectories
 # -----------------------------------------------------
 
-expert_trajectories = load_npz_trajectories("/home/chris/Imitation/trajectories/merged_real_dataset_1.1to1.6.npz")
+expert_trajectories = load_npz_trajectories("/home/chris/Imitation/trajectories/merged_real_dataset_1.1to1.6_for_training.npz")
 
 
 # -----------------------------------------------------
@@ -93,6 +86,20 @@ policy = PPO("MlpPolicy", venv, verbose=1)
 
 env = make_franka_env()
 print("Generated observation shape:", env.observation_space.shape)
+# Quick validation: ensure expert obs dim matches environment obs dim
+if len(expert_trajectories) == 0:
+    raise RuntimeError('No expert trajectories loaded; check NPZ path')
+
+# Flatten env observation size
+env_obs_dim = int(np.prod(env.observation_space.shape))
+expert_obs_dim = int(np.ravel(expert_trajectories[0].obs[0]).shape[0])
+print(f"Expert obs dim: {expert_obs_dim}; Env obs dim: {env_obs_dim}")
+if expert_obs_dim != env_obs_dim:
+    raise ValueError(
+        f"Expert observation dimension ({expert_obs_dim}) does not match environment observation dimension ({env_obs_dim}).\n"
+        "If you intended to use the robosuite-53 representation, create an aligned dataset first using the helper script:\n"
+        "  conda run -n env_imitation python3 scripts/align_expert_obs.py --to-robosuite --npz-in trajectories/merged_real_dataset_1.1to1.6.npz --hdf5 trajectories/merged_real_dataset_1.1to1.6.hdf5 --npz-out trajectories/merged_real_dataset_1.1to1.6_robosuite.npz\n"
+    )
 
 
 reward_net = BasicShapedRewardNet(
@@ -122,14 +129,33 @@ airl_trainer = airl.AIRL(
 # -----------------------------------------------------
 # 5. Training Loop
 # -----------------------------------------------------
-print("Expert observation shape:", expert_trajectories[0].obs.shape)
-print("Generated observation shape:", env.observation_space.shape)
-print("Starting AIRL training...")
+#print("Expert observation shape:", expert_trajectories[0].obs.shape)
+#print("Generated observation shape:", env.observation_space.shape)
+#print("Starting AIRL training...")
 
 
 #airl_trainer.train(n_epochs=50)
 airl_trainer.train(100_000)
 
-# Save trained policy
-policy.save("airl_franka_cube_policy")
-print("Training complete. Policy saved.")
+# Save trained policy and reward net to a timestamped folder so we don't lose artifacts
+timestamp = time.strftime("%Y%m%d_%H%M%S")
+out_dir = os.path.join("output", "manual_runs", f"franka_{timestamp}")
+os.makedirs(out_dir, exist_ok=True)
+
+# policy
+policy_path = os.path.join(out_dir, "gen_policy")
+policy.save(policy_path)
+
+# reward net: save state_dict and full object where possible
+try:
+    reward_state_path = os.path.join(out_dir, "reward_net_state.pth")
+    torch.save(reward_net.state_dict(), reward_state_path)
+    # also try to save the whole object (may fail if there are lambdas or non-picklable members)
+    reward_full_path = os.path.join(out_dir, "reward_net_full.pth")
+    torch.save(reward_net, reward_full_path)
+    print(f"Saved reward net state to {reward_state_path} and full object to {reward_full_path}")
+except Exception as e:
+    print("Warning: saving full reward_net object failed:", e)
+    print(f"Reward state was saved to {reward_state_path} if available.")
+
+print(f"Training complete. Artifacts saved under {out_dir}")
