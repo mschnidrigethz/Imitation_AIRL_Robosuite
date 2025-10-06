@@ -1,0 +1,164 @@
+{
+  "artifacts": [],
+  "command": "airl",
+  "experiment": {
+    "base_dir": "/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/imitation/scripts/config",
+    "dependencies": [
+      "datasets==4.1.1",
+      "huggingface-sb3==3.0",
+      "imitation==1.0.1",
+      "numpy==2.2.6",
+      "sacred==0.8.7",
+      "stable-baselines3==2.2.1"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_d9c38bfafb6e3d60fef07b6a7dc3df8a.py"
+      ],
+      [
+        "../ingredients/__init__.py",
+        "_sources/__init___287628f92ab40174590052b0895907e9.py"
+      ],
+      [
+        "../ingredients/demonstrations.py",
+        "_sources/demonstrations_648e43b22cbf58ee26f064ded7a0db06.py"
+      ],
+      [
+        "../ingredients/environment.py",
+        "_sources/environment_f7e538ac405cd16aea9d7c16321df60e.py"
+      ],
+      [
+        "../ingredients/expert.py",
+        "_sources/expert_fed1b62fbd609ccecb288bd49910bbcf.py"
+      ],
+      [
+        "../ingredients/logging.py",
+        "_sources/logging_e3434de0ed79a29220b85539a95bd5ad.py"
+      ],
+      [
+        "../ingredients/policy.py",
+        "_sources/policy_cdd16472dd00071e2f1b95c843a81afd.py"
+      ],
+      [
+        "../ingredients/policy_evaluation.py",
+        "_sources/policy_evaluation_2fe49c2cba801d824a725cf851fb4fc4.py"
+      ],
+      [
+        "../ingredients/reward.py",
+        "_sources/reward_47d587e21f7b70c2b2fc392b57ddd784.py"
+      ],
+      [
+        "../ingredients/rl.py",
+        "_sources/rl_070a71113d5f26a0d45d00037e05fad1.py"
+      ],
+      [
+        "../ingredients/wb.py",
+        "_sources/wb_69d7ec6f84b488d37521eda98d6089c9.py"
+      ]
+    ]
+  },
+  "heartbeat": "2025-10-02T09:23:30.261162",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 9 7900X 12-Core Processor",
+    "gpus": {
+      "driver_version": "580.65.06",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 4090",
+          "persistence_mode": true,
+          "total_memory": 24564
+        }
+      ]
+    },
+    "hostname": "linux-perfection",
+    "os": [
+      "Linux",
+      "Linux-6.8.0-84-generic-x86_64-with-glibc2.35"
+    ],
+    "python_version": "3.10.18"
+  },
+  "meta": {
+    "command": "airl",
+    "config_updates": {
+      "demonstrations": {
+        "n_expert_demos": 500
+      },
+      "expert": {
+        "policy_type": "ppo-huggingface"
+      },
+      "total_timesteps": 5000
+    },
+    "named_configs": [
+      "seals_mountain_car"
+    ],
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--id": null,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": "airl",
+      "UPDATE": [
+        "seals_mountain_car",
+        "total_timesteps=5000",
+        "expert.policy_type=ppo-huggingface",
+        "demonstrations.n_expert_demos=500"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": {
+    "expert_stats": {
+      "len_max": 200,
+      "len_mean": 200.0,
+      "len_min": 200,
+      "len_std": 0.0,
+      "n_traj": 504,
+      "return_max": -83.0,
+      "return_mean": -99.12301587301587,
+      "return_min": -166.0,
+      "return_std": 9.319970559072075
+    },
+    "imit_stats": {
+      "len_max": 200,
+      "len_mean": 200.0,
+      "len_min": 200,
+      "len_std": 0.0,
+      "monitor_return_len": 56,
+      "monitor_return_max": -200.0,
+      "monitor_return_mean": -200.0,
+      "monitor_return_min": -200.0,
+      "monitor_return_std": 0.0,
+      "n_traj": 56,
+      "return_max": -5.863678932189941,
+      "return_mean": -60.65941619873047,
+      "return_min": -155.77484130859375,
+      "return_std": 28.646331787109375
+    }
+  },
+  "start_time": "2025-10-02T09:23:08.956997",
+  "status": "COMPLETED",
+  "stop_time": "2025-10-02T09:23:28.259770"
+}

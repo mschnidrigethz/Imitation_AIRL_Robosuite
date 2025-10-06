@@ -1,0 +1,328 @@
+INFO - train_adversarial - Running command 'airl'
+INFO - train_adversarial - Started run with ID "2"
+INFO - imitation.scripts.ingredients.logging - Logging to /home/chris/Imitation/output/airl/seals-MountainCar-v0/20251002_112308_659370
+INFO - imitation.scripts.ingredients.demonstrations - Generating 500 expert trajectories
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+2025-10-02 11:23:10.331504: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:10.331504: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:10.331627: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:10.331627: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:10.331646: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:10.349236: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:10.363062: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:10.363062: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:10.365123: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:10.365123: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:10.365121: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:10.376522: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:10.376522: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:10.382810: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:10.408823: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:10.408837: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:11.284800: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:11.288829: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:11.382254: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:11.392992: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:11.403956: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:11.428178: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:11.432168: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:11.437021: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+INFO - root - Loading Stable Baselines policy for '<class 'stable_baselines3.ppo.ppo.PPO'>' from '/home/chris/.cache/huggingface/hub/models--HumanCompatibleAI--ppo-seals-MountainCar-v0/snapshots/332b978eec247cbd9d01d5942182fd271b378d95/ppo-seals-MountainCar-v0.zip'
+INFO - root - Rollout stats: {'n_traj': 504, 'return_min': -166.0, 'return_mean': -99.12301587301587, 'return_std': 9.319970559072075, 'return_max': -83.0, 'len_min': 200, 'len_mean': 200.0, 'len_std': 0.0, 'len_max': 200}
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/chris/miniconda3/envs/env_imitation/lib/python3.10/site-packages/sacred/dependencies.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+2025-10-02 11:23:21.855772: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:21.892751: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:21.902029: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:21.902028: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:21.902447: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:21.902624: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:21.902624: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:21.902641: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:21.902641: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:21.934860: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:21.934860: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:21.936968: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:21.944050: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:21.944048: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:21.946079: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:21.947111: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-02 11:23:22.860244: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:22.864871: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:22.882187: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:22.974098: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:22.977542: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:22.979214: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:22.980479: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-02 11:23:22.999074: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+INFO - imitation.scripts.ingredients.rl - RL algorithm: <class 'stable_baselines3.ppo.ppo.PPO'>
+INFO - imitation.scripts.ingredients.rl - Policy network summary:
+ FeedForward32Policy(
+  (features_extractor): FlattenExtractor(
+    (flatten): Flatten(start_dim=1, end_dim=-1)
+  )
+  (pi_features_extractor): FlattenExtractor(
+    (flatten): Flatten(start_dim=1, end_dim=-1)
+  )
+  (vf_features_extractor): FlattenExtractor(
+    (flatten): Flatten(start_dim=1, end_dim=-1)
+  )
+  (mlp_extractor): MlpExtractor(
+    (policy_net): Sequential(
+      (0): Linear(in_features=2, out_features=32, bias=True)
+      (1): Tanh()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+      (3): Tanh()
+    )
+    (value_net): Sequential(
+      (0): Linear(in_features=2, out_features=32, bias=True)
+      (1): Tanh()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+      (3): Tanh()
+    )
+  )
+  (action_net): Linear(in_features=32, out_features=3, bias=True)
+  (value_net): Linear(in_features=32, out_features=1, bias=True)
+)
+INFO - imitation.scripts.train_adversarial - Using '<class 'imitation.algorithms.adversarial.airl.AIRL'>' algorithm
+round:   0%|          | 0/2 [00:00<?, ?it/s]                                            ------------------------------------------
+| raw/                        |          |
+|    gen/rollout/ep_len_mean  | 200      |
+|    gen/rollout/ep_rew_mean  | -200     |
+|    gen/time/fps             | 5097     |
+|    gen/time/iterations      | 1        |
+|    gen/time/time_elapsed    | 0        |
+|    gen/time/total_timesteps | 2048     |
+------------------------------------------
+round:   0%|          | 0/2 [00:00<?, ?it/s]                                            --------------------------------------------------
+| raw/                                |          |
+|    disc/disc_acc                    | 0.5      |
+|    disc/disc_acc_expert             | 1        |
+|    disc/disc_acc_gen                | 0        |
+|    disc/disc_entropy                | 0.509    |
+|    disc/disc_loss                   | 0.969    |
+|    disc/disc_proportion_expert_pred | 1        |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 1        |
+|    disc/n_expert                    | 1.02e+03 |
+|    disc/n_generated                 | 1.02e+03 |
+--------------------------------------------------
+round:   0%|          | 0/2 [00:00<?, ?it/s]                                            --------------------------------------------------
+| raw/                                |          |
+|    disc/disc_acc                    | 0.5      |
+|    disc/disc_acc_expert             | 1        |
+|    disc/disc_acc_gen                | 0        |
+|    disc/disc_entropy                | 0.512    |
+|    disc/disc_loss                   | 0.96     |
+|    disc/disc_proportion_expert_pred | 1        |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 1        |
+|    disc/n_expert                    | 1.02e+03 |
+|    disc/n_generated                 | 1.02e+03 |
+--------------------------------------------------
+round:   0%|          | 0/2 [00:00<?, ?it/s]                                            --------------------------------------------------
+| raw/                                |          |
+|    disc/disc_acc                    | 0.5      |
+|    disc/disc_acc_expert             | 1        |
+|    disc/disc_acc_gen                | 0        |
+|    disc/disc_entropy                | 0.513    |
+|    disc/disc_loss                   | 0.955    |
+|    disc/disc_proportion_expert_pred | 1        |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 1        |
+|    disc/n_expert                    | 1.02e+03 |
+|    disc/n_generated                 | 1.02e+03 |
+--------------------------------------------------
+round:   0%|          | 0/2 [00:00<?, ?it/s]                                            --------------------------------------------------
+| raw/                                |          |
+|    disc/disc_acc                    | 0.5      |
+|    disc/disc_acc_expert             | 1        |
+|    disc/disc_acc_gen                | 0        |
+|    disc/disc_entropy                | 0.515    |
+|    disc/disc_loss                   | 0.949    |
+|    disc/disc_proportion_expert_pred | 1        |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 1        |
+|    disc/n_expert                    | 1.02e+03 |
+|    disc/n_generated                 | 1.02e+03 |
+--------------------------------------------------
+round:   0%|          | 0/2 [00:00<?, ?it/s]------------------------------------------------------
+| mean/                               |              |
+|    disc/disc_acc                    | 0.5          |
+|    disc/disc_acc_expert             | 1            |
+|    disc/disc_acc_gen                | 0            |
+|    disc/disc_entropy                | 0.512        |
+|    disc/disc_loss                   | 0.958        |
+|    disc/disc_proportion_expert_pred | 1            |
+|    disc/disc_proportion_expert_true | 0.5          |
+|    disc/global_step                 | 1            |
+|    disc/n_expert                    | 1.02e+03     |
+|    disc/n_generated                 | 1.02e+03     |
+|    gen/rollout/ep_len_mean          | 200          |
+|    gen/rollout/ep_rew_mean          | -200         |
+|    gen/time/fps                     | 5.1e+03      |
+|    gen/time/iterations              | 1            |
+|    gen/time/time_elapsed            | 0            |
+|    gen/time/total_timesteps         | 2.05e+03     |
+|    gen/train/approx_kl              | 0.014236741  |
+|    gen/train/clip_fraction          | 0.332        |
+|    gen/train/clip_range             | 0.2          |
+|    gen/train/entropy_loss           | -1.09        |
+|    gen/train/explained_variance     | 0.0014063716 |
+|    gen/train/learning_rate          | 0.0003       |
+|    gen/train/loss                   | 3.63         |
+|    gen/train/n_updates              | 10           |
+|    gen/train/policy_gradient_loss   | -0.0438      |
+|    gen/train/value_loss             | 7.18         |
+------------------------------------------------------
+                                            round:   0%|          | 0/2 [00:00<?, ?it/s]round:  50%|█████     | 1/2 [00:00<00:00,  1.00it/s]                                                    -----------------------------------------------------
+| raw/                               |              |
+|    gen/rollout/ep_len_mean         | 200          |
+|    gen/rollout/ep_rew_mean         | -200         |
+|    gen/rollout/ep_rew_wrapped_mean | -5.68        |
+|    gen/time/fps                    | 5996         |
+|    gen/time/iterations             | 1            |
+|    gen/time/time_elapsed           | 0            |
+|    gen/time/total_timesteps        | 4096         |
+|    gen/train/approx_kl             | 0.014236741  |
+|    gen/train/clip_fraction         | 0.332        |
+|    gen/train/clip_range            | 0.2          |
+|    gen/train/entropy_loss          | -1.09        |
+|    gen/train/explained_variance    | 0.0014063716 |
+|    gen/train/learning_rate         | 0.0003       |
+|    gen/train/loss                  | 3.63         |
+|    gen/train/n_updates             | 10           |
+|    gen/train/policy_gradient_loss  | -0.0438      |
+|    gen/train/value_loss            | 7.18         |
+-----------------------------------------------------
+round:  50%|█████     | 1/2 [00:01<00:00,  1.00it/s]                                                    --------------------------------------------------
+| raw/                                |          |
+|    disc/disc_acc                    | 0.5      |
+|    disc/disc_acc_expert             | 1        |
+|    disc/disc_acc_gen                | 0        |
+|    disc/disc_entropy                | 0.516    |
+|    disc/disc_loss                   | 0.947    |
+|    disc/disc_proportion_expert_pred | 1        |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 2        |
+|    disc/n_expert                    | 1.02e+03 |
+|    disc/n_generated                 | 1.02e+03 |
+--------------------------------------------------
+round:  50%|█████     | 1/2 [00:01<00:00,  1.00it/s]                                                    --------------------------------------------------
+| raw/                                |          |
+|    disc/disc_acc                    | 0.5      |
+|    disc/disc_acc_expert             | 1        |
+|    disc/disc_acc_gen                | 0        |
+|    disc/disc_entropy                | 0.519    |
+|    disc/disc_loss                   | 0.936    |
+|    disc/disc_proportion_expert_pred | 1        |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 2        |
+|    disc/n_expert                    | 1.02e+03 |
+|    disc/n_generated                 | 1.02e+03 |
+--------------------------------------------------
+round:  50%|█████     | 1/2 [00:01<00:00,  1.00it/s]                                                    --------------------------------------------------
+| raw/                                |          |
+|    disc/disc_acc                    | 0.5      |
+|    disc/disc_acc_expert             | 1        |
+|    disc/disc_acc_gen                | 0        |
+|    disc/disc_entropy                | 0.523    |
+|    disc/disc_loss                   | 0.929    |
+|    disc/disc_proportion_expert_pred | 1        |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 2        |
+|    disc/n_expert                    | 1.02e+03 |
+|    disc/n_generated                 | 1.02e+03 |
+--------------------------------------------------
+round:  50%|█████     | 1/2 [00:01<00:00,  1.00it/s]                                                    --------------------------------------------------
+| raw/                                |          |
+|    disc/disc_acc                    | 0.5      |
+|    disc/disc_acc_expert             | 1        |
+|    disc/disc_acc_gen                | 0        |
+|    disc/disc_entropy                | 0.523    |
+|    disc/disc_loss                   | 0.926    |
+|    disc/disc_proportion_expert_pred | 1        |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 2        |
+|    disc/n_expert                    | 1.02e+03 |
+|    disc/n_generated                 | 1.02e+03 |
+--------------------------------------------------
+round:  50%|█████     | 1/2 [00:01<00:00,  1.00it/s]------------------------------------------------------
+| mean/                               |              |
+|    disc/disc_acc                    | 0.5          |
+|    disc/disc_acc_expert             | 1            |
+|    disc/disc_acc_gen                | 0            |
+|    disc/disc_entropy                | 0.52         |
+|    disc/disc_loss                   | 0.935        |
+|    disc/disc_proportion_expert_pred | 1            |
+|    disc/disc_proportion_expert_true | 0.5          |
+|    disc/global_step                 | 2            |
+|    disc/n_expert                    | 1.02e+03     |
+|    disc/n_generated                 | 1.02e+03     |
+|    gen/rollout/ep_len_mean          | 200          |
+|    gen/rollout/ep_rew_mean          | -200         |
+|    gen/rollout/ep_rew_wrapped_mean  | -5.68        |
+|    gen/time/fps                     | 6e+03        |
+|    gen/time/iterations              | 1            |
+|    gen/time/time_elapsed            | 0            |
+|    gen/time/total_timesteps         | 4.1e+03      |
+|    gen/train/approx_kl              | 0.014385849  |
+|    gen/train/clip_fraction          | 0.17         |
+|    gen/train/clip_range             | 0.2          |
+|    gen/train/entropy_loss           | -1.06        |
+|    gen/train/explained_variance     | 0.0036898851 |
+|    gen/train/learning_rate          | 0.0003       |
+|    gen/train/loss                   | 14.4         |
+|    gen/train/n_updates              | 20           |
+|    gen/train/policy_gradient_loss   | -0.0249      |
+|    gen/train/value_loss             | 28.8         |
+------------------------------------------------------
+                                                    round:  50%|█████     | 1/2 [00:01<00:00,  1.00it/s]round: 100%|██████████| 2/2 [00:01<00:00,  1.11it/s]round: 100%|██████████| 2/2 [00:01<00:00,  1.10it/s]
+INFO - root - Saved policy to /home/chris/Imitation/output/airl/seals-MountainCar-v0/20251002_112308_659370/checkpoints/final/gen_policy
+INFO - train_adversarial - Result: {'imit_stats': {'n_traj': 56, 'monitor_return_len': 56, 'return_min': -155.77484130859375, 'return_mean': -60.65941619873047, 'return_std': 28.646331787109375, 'return_max': -5.863678932189941, 'len_min': 200, 'len_mean': 200.0, 'len_std': 0.0, 'len_max': 200, 'monitor_return_min': -200.0, 'monitor_return_mean': -200.0, 'monitor_return_std': 0.0, 'monitor_return_max': -200.0}, 'expert_stats': {'n_traj': 504, 'return_min': -166.0, 'return_mean': -99.12301587301587, 'return_std': 9.319970559072075, 'return_max': -83.0, 'len_min': 200, 'len_mean': 200.0, 'len_std': 0.0, 'len_max': 200}}
+INFO - train_adversarial - Completed after 0:00:19
