@@ -391,6 +391,11 @@ def main():
             gripper_qpos = np.zeros((gripper_pos.shape[0], 2), dtype=gripper_pos.dtype)
 
         gripper_qvel = np.zeros_like(gripper_qpos)
+        
+        # Approximation of gripper qvel via finite differences (assuming 50Hz sampling)
+        #dt = 1.0 / 50.0     # falls Samplerate 50 Hz; passe an
+        ## forward difference, pad first row with zeros or repeat
+        #gripper_qvel = np.vstack([np.zeros((1, gripper_qpos.shape[1])), np.diff(gripper_qpos, axis=0)]) / dt
 
         proprio = np.concatenate([jp, jp_cos, jp_sin, jv, eef_pos, eef_quat, eef_quat_site, gripper_qpos, gripper_qvel], axis=1)
         assert proprio.shape[1] == 43, f'proprio width {proprio.shape[1]} != 43'

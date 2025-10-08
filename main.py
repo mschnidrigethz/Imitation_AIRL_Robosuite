@@ -135,7 +135,7 @@ airl_trainer = airl.AIRL(
 
 
 #airl_trainer.train(n_epochs=50)
-airl_trainer.train(100_000)
+airl_trainer.train(2_000_000)
 
 # Save trained policy and reward net to a timestamped folder so we don't lose artifacts
 timestamp = time.strftime("%Y%m%d_%H%M%S")
