@@ -1,3 +1,10 @@
+"""
+python scripts/check_reward_net.py --reward output/manual_runs/franka_20251008_123837/reward_net_state.pth --expert-npz trajectories/merged_real_dataset_1.1to1.6_for_training.npz
+
+Zu testendes Reward Netzt einfügen, dann wird es auf
+Experten-Daten und random Daten evaluiert."""
+
+
 import argparse
 import numpy as np
 import torch
@@ -169,8 +176,14 @@ def load_reward_model(path, obs_space, act_space, device='cpu', allow_unsafe=Fal
         try:
             net.load_state_dict(state)
             return net.to(device)
-        except Exception as e:
-            raise RuntimeError(f"Failed to load state_dict into BasicShapedRewardNet: {e}")
+        except RuntimeError as e:
+            # Try again with non-strict loading to tolerate extra running-stat keys
+            try:
+                net.load_state_dict(state, strict=False)
+            except Exception as e2:
+                raise RuntimeError(f"Failed to load state_dict into BasicShapedRewardNet: {e2}")
+            print("Warning: loaded state_dict with strict=False; some keys were unexpected/ignored (likely running stat keys)")
+            return net.to(device)
 
     # If it's already a module
     if isinstance(ckpt, torch.nn.Module):
